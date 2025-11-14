@@ -17,12 +17,14 @@ function CalculateTax(income: number, taxYear = 2022): number {
 const calculateTax = CalculateTax(10_000, 2055);
 console.log(calculateTax);
 
-// Object
-let employee: {
+// Object & Type-Aliases
+type Employee = {
     readonly id: number,
     name: string,
     retire: (date: Date) => void
-} = {
+}
+
+let employee: Employee = {
     id: 1,
     name: "Ren",
     retire: (date: Date) => {
